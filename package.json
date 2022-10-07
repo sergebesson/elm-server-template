@@ -1,0 +1,26 @@
+{
+  "name": "elm-server-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "./build.sh dev",
+    "server:dev": "http-server dist --port ${PORT:=8080} -o -c-1",
+    "start:dev": "./watch_server.sh",
+    "build:prod": "./build.sh prod",
+    "server:prod": "http-server dist --port ${PORT:=8080} --gzip -d false -c-1",
+    "start": "npm run server:prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "elm": "^0.19.1-5",
+    "elm-format": "^0.8.5",
+    "elm-json": "^0.2.12",
+    "uglify-js": "^3.17.3"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
